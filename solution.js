@@ -8,8 +8,18 @@ Array.prototype.sum = function () {
 };
 
 Array.prototype.average = function () {
-  return this.sum() / this.length;
+  let total = 0;
+  for (const element of this) {
+    total += element;
+  }
+
+  return total / this.length;
 };
+
+// Alternate version, using the `sum` method from above.
+// Array.prototype.average = function () {
+//   return this.sum() / this.length;
+// };
 
 // Testing it all!
 
